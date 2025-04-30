@@ -1,0 +1,37 @@
+* {padding: 0; margin: 0; font-family: "Noto Sans KR", serif; 
+    box-sizing: border-box;}
+
+#page{width: 99vw; height: 99vh; margin: 0 auto;}
+.clear{clear: both;}
+.main-banner{width: 100%; height: 30%;
+    background-image: url("https://placehold.co/600x400");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{width: 100%; margin: 0 auto;}
+.content-box{width: 100%; float: left; padding: 0.5rem;}
+.content-box img { max-width: 100%; height: auto;}
+.product-area h2{padding-left: 0.5rem;}
+.product-list{margin-top: 1rem;}
+.product-list li{float: left; width: 50%; }
+.product-list li a{ display: block; background-color: var(--green-light-30); 
+    color: var(--white); width: 100%; 
+    padding: 0.5rem; border: 0.5rem solid white;
+    display: flex; align-items: center; justify-content: center;}
+.product{width: 100%; float: left; padding: 0.5rem;}
+.product img{max-width: 100%; height: auto;}
+
+@media screen and (min-width:768px) {
+    .container{width: 80%;}
+    .content-box{width: 50%;}
+    .product{width: 33%;}
+    .product-list li{width: auto;}
+    .product-list li a{ background-color: transparent; 
+        border: transparent; color: black;}
+}
+
+@media screen and (min-width:1024px) {
+    .container{width: 60%;}
+    .main-banner{height: 50%;}
+}
