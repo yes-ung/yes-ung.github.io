@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.container{ width: 100%; margin: 2rem auto;}
+.content-box{width: 100%;}
+.content-area .search {float: right;}
+table,tr,th,td{border: 1px solid var(--blue-light-10); border-collapse: collapse; padding: 1rem;
+}
+th{display:block; width: 100%; background-color: var(--blue-light-30); color: var(--white);
+}
+tr{display: block;}
+td{display: list-item; font-size: 1rem; list-style-type: none;}
+.clear{clear: both;}
+.page{text-align:center; margin-top: 10px;}
+.page-box li {display: inline-block; text-align: center;}
+.page-box a {display: block; width: 2rem;}
+.page-box:active{background-color: var(--blue-light-30); color: var(--white); border-radius: 40%;}
+
+
+@media screen and (min-width: 768px) {
+    .container{width: 90%;}
+    table{display: table;}
+    tr{display: table-row;}
+    td{display: table-cell;}
+    
+}
+
+@media screen and (min-width: 1024px) {
+    /* TODO : 본문 */ 
+    .container {width: 60%;}
+}

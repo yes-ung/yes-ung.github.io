@@ -1,0 +1,56 @@
+/* 머리말 */
+nav {width: 100%;margin: 0 auto;}
+nav .brand {float:none; text-align: center; padding:1.5rem;}
+nav .fab {display:block; position:absolute; left:15px; top:25px;}
+nav .fab img {width: 2rem;}
+nav .menu {float:none; height:auto; margin: 0 15px; display: none;}
+nav .menu li {list-style-type: none; float:left; width:50%; border:1px solid var(--grayscale-20);}
+nav .menu li a {height:6rem; display: flex; align-items: center; justify-content: center;}
+nav .menu li a:hover {background-color: var(--blue-light-30); color: var(--white);}
+/* TODO : 배너 */
+.main-banner {
+  width: 100%;
+  height: 40vh;
+  background-image: url("../img/banner_1260_500.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  position: relative;
+}
+/* TODO : 타이핑 글자 */
+#typing {position: absolute; top: 10%; left: 10%; color: beige; font-family: "Dancing Script", serif;}
+.main-banner2 {
+  width: 100%;
+  height: 40vh;
+  background-image: url("../img/banner2_1260_500.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+/* 꼬리말 */
+footer {clear: both;height: 6rem;background-color: lightgrey;font-size: 14px;font-style: italic;}
+#address {height: 50%; display: flex; align-items: center; margin-left: 2rem;}
+#address > div > h5 {margin: 4px 0 4px 0;}
+#address > div > p {margin: 4px 0 4px 0;}
+#customer {height: 50%; display: flex; align-items: center; margin-left: 2rem;}
+
+@media screen and (min-width: 768px) {
+  /* 머리말 */
+  nav {width: 90%;}
+  nav .brand {float:left; padding:2.3rem;}
+  nav .fab {margin-top: 14px;}
+  /* TODO : 태블릿/pc 에서는 보이기 */
+  nav .menu {float:right; padding-top:5px;display: block;}
+  nav .menu li {width:inherit; border:none;}
+  nav .menu li a {padding:1rem 0.6rem;}
+
+  /* 꼬리말 */
+  #address {height: 100%; float: left;}
+  #customer {height: 100%; float: right;}
+}
+
+@media screen and (min-width: 1024px) {
+    /* 머리말 */
+    nav {width: 60%;}
+}

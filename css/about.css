@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* TODO : 본문 */
+.container {width: 100%; margin: 2rem auto;}
+.content-box {float: left; width:100%; padding: 5px;}
+.content-box > img {max-width: 100%; height: auto;}
+.content-box > h1 {margin-bottom: 10px;}
+.content-box > p {padding: 10px;}
+.clear {clear: both;}
+
+@media screen and (min-width: 768px) {
+    /* TODO : 본문 */
+    .container {width: 90%;}
+    .content-box {width:45%;margin-right: 10px;}
+}
+
+@media screen and (min-width: 1024px) {
+    /* TODO : 본문 */
+    .container {width: 60%;}
+}

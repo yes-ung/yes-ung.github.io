@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* 본문 */
+.container {width: 100%; margin: 2rem auto;}
+.content-box {float: left; width:100%; padding: 5px;}
+.content-box > img {max-width: 100%; height: auto;}
+.clear {clear: both;}
+.product-area h2 {font-weight:bold; font-size:1.5rem; padding:1.5rem 0; color:var(--black);}
+.product-list li {float: left; width:50%; border: 1px solid var(--blue-light-10);}
+.product-list li a {display:block; height:2.75rem; display: flex; align-items: center; justify-content: center; background-color: var(--blue-light-30);color: var(--white);}
+.product {float: left; width:100%;padding: 5px;}
+/* TODO : 추천/상품 이미지 hover 시 확대 , 애니메이션 */
+.content-box:hover, .product:hover {scale: 1.03; transition: all ease 1s;}
+/* TODO : fab 디자인 */
+#fab {float: left; scale: 2; width: 50px;height: 50px;border-radius: 50%;position: sticky;top: 90vh;left: 99vw;z-index: 99999;}
+.product img {max-width: 100%; height: auto;}
+.product > p {margin-left: 5px;font-size: 0.8rem; color: var(--grayscale-50);}
+
+@media screen and (min-width: 768px) {
+    /* 본문 */
+    .container {width: 90%;}
+    .content-box {width:33%;}
+    .product-list li {width:inherit; border:none}
+    .product-list li a {margin-right: 10px; background-color: var(--white);color: var(--black);}
+    .product {width:25%;}
+}
+
+@media screen and (min-width: 1024px) {
+    /* 본문 */
+    .container {width: 60%;}
+}
