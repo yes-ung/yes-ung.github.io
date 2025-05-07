@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS css: https://michalsnik.github.io/aos/ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/00_style.css">
+    <link rel="stylesheet" href="./css/00_common.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <!-- 파비콘 : 웹브라우저 탭 글자앞에 이미지 -->
+    <link rel="icon" type="image/png" href="./img/simple-coding.png" />
+</head>
+
+<body>
+    <div id="page">
+        <!-- 메뉴 -->
+        <nav>
+            <h1 class="brand"><a href="#">simple-coding</a></h1>
+            <div class="fab">
+                <a href="#none"><img src="./img/1_icon_1.png" alt="햄버거메뉴"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="./07_index.html"  >Home</a></li>
+                <li><a href="./08_about.html">About</a></li>
+                <li><a href="./09_community.html">Community</a></li>
+                <li><a href="./10_contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- 배너 이미지 -->
+        <div class="swiper mySwiper clear">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- TODO: 여기에 1번 배경이미지 사용하기 -->
+                    <div class="main-banner">
+                        <h5 id="typing"></h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!-- TODO: 여기에 2번 배경이미지 사용하기 -->
+                    <div class="main-banner2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 본문 -->
+        <div class="container clear">
+            <br/>
+            <div class="content-area clear" data-aos="fade-right">
+                <div class="content-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.047340377962!2d129.0563986879041!3d35.15544008845812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eb656bb62e77%3A0x7a14272371a19cb8!2z7ISc66m07KCK7J2M7J2Y6rGw66as!5e0!3m2!1sko!2skr!4v1739829629405!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-box">
+                    <h1>Contact Us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, <br/>
+                        adipisicing elit. Id nemo,  <br/>
+                        quasi ab aliquam ea molestiae maxime odio </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 꼬리말 -->
+        <footer>
+            <div id="address">
+                <div id="address-detail">
+                    <h5>About | Course | Contact | Guest Book</h5>
+                    <p>부산시 동래구 충렬대로</p>
+                </div>
+            </div>
+            <div id="customer">
+                <p>Tel: 010-0000-0000</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jQuery CDN js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- typed js: https://mattboldt.com/demos/typed-js/ -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Swiper JS: 공식사이트) https://swiperjs.com/demos -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS js: https://michalsnik.github.io/aos/ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/07_index.js"></script>
+</body>
+
+</html>
