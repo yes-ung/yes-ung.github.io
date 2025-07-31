@@ -12,14 +12,14 @@ body{
     
 } */
 div.GameLayer{
-    max-width: 700px;
-    max-height: 1400px;
-    width:100%;
+    /* min-width: 450px; */
+    aspect-ratio: 9/16;
     height:100%;
     position:absolute;
     /* display:none; */
     /* 커서모양 아직 미정 * .icon 파일로 지정/
     /* cursor:url(),auto; */
+    border: 1px solid red;
 }
 .GameLayer img{
     width:100%;
@@ -89,10 +89,10 @@ background-image: url("../img/Menu/버튼배경.png") ;
 }
 .BackButton{
     position: absolute;
-    right: 20px;
-    bottom:20px;
-    width: 100px; height: 60px;
-    font-size: 20px;
+    right: 2%;
+    bottom:1%;
+    width: 20%; height: 7%;
+    font-size: 2.5vh;
     display: flex;
     justify-content: center; /* 가로 중앙 */
     align-items: center;     /* 세로 중앙 */
@@ -118,7 +118,7 @@ background-image: url("../img/Menu/버튼배경.png") ;
     left:0;
     bottom:0;
     width:100%;
-    height:200px;
+    height:15%;
     /* background-color:rgba(128, 128, 128, 0.486); */
     /* 투명도 */
     /* opacity: 0.6;   */
@@ -126,8 +126,8 @@ background-image: url("../img/Menu/버튼배경.png") ;
 }
 div#GameStart  .menuButton{
     position:absolute;
-    width: 140px;
-    height: 150px;
+    width: 24%;
+    height: 50%;
     /* border: 3px solid yellow; */
     margin: 20px auto;
     background-repeat: no-repeat;
@@ -137,11 +137,11 @@ div#GameStart  .menuButton{
     display: flex;
     justify-content: center;   /* 가로 가운데 */
     align-items: center;       /* 세로 가운데 */
-    font:normal 25px Georgia,Verdana;
+    font:normal 2.5vh Georgia,Verdana;
 }
  .goStageButton {
     
-    left:10px;
+    left:1%;
     bottom:0;
     background-image: url("../img/Menu/기본버튼.png");
 }
@@ -153,8 +153,22 @@ div#GameStart  .menuButton{
     background-image: url("../img/Menu/기본버튼.png");
     opacity: 0.7;
 }
+ .goStoreButton {
+    
+    left: 25.5%;
+    bottom:0;
+    background-image: url("../img/Menu/기본버튼.png");
+}
+.goStoreButton:hover {
+    background-image: url("../img/Menu/기본버튼클릭.png");
+    /* opacity: 0.7; */
+}
+.goStoreButton:active {
+    background-image: url("../img/Menu/기본버튼.png");
+    opacity: 0.7;
+}
 .goBarracksButton {
-    right:10px;
+    right:1%;
     bottom:0;
     background-image: url("../img/Menu/기본버튼.png");
 }
@@ -171,7 +185,7 @@ div#GameStart  .menuButton{
     margin-right:5px;
 } */
 .goRecruitmentButton{
-    right: 160px;
+    right: 25.5%;
     bottom: 0;
     background-image: url("../img/Menu/기본버튼.png");
 }
@@ -186,23 +200,39 @@ div#GameStart  .menuButton{
 /* 로비 화면 위 */
 
 /* 스테이지 화면   아래 */
+div#GameStage{
+    position: relative;
+    /* width: 100vw;  */
+     height: 100vh;  
+    overflow: hidden; /* ✅ 자식 요소가 넘쳐도 부모는 고정 크기 유지 */
+    /* background-image: url(...);
+    background-size: cover;
+    background-position: center; */
+}
 div#GameStage .StageButtonWapper{
-    padding: 35vh 0;
+    margin: 35vh 0;
     width: 100%;
-    height: 100%;
+    
     
 }
 div#GameStage .StageButtonCover{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
+}
+div#GameStage .StageButtonSlider {
+     display: flex;
+    overflow-x: hidden;    /* ✅ 가로 스크롤 자체를 숨김 */
+    white-space: nowrap;
+    width: 100%;
 }
 div#GameStage div.StageButton{
     /* 이 슬라이드 플러그인은 가로 지정이 안됨 */
-    width: 200px;
-    height: 200px;
+    width: 20vh;
+    height: 20vh;
     box-sizing: border-box;
-    margin: 0 3vw;
+    margin: 0 3vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -235,14 +265,73 @@ div#GameStage .UiBack1{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
- }
+    height: 10%;
+}
+div#GameStage div.BackButton{
+    bottom: 10%;
+    height: 60%;
+}    
+ 
 /* 스테이지 화면   위 */
 
 /* 병영관리 화면 아래 */
+div#GameBarracks  .BarracksBuilding{
+    position:absolute;
+    width: 50%;
+    height: 25%;
+    border: 1px solid red;
+    margin: 20px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;   /* 가로 가운데 */
+    align-items: center;       /* 세로 가운데 */
+    font:normal 2.5vh Georgia,Verdana;
+    
+}
+div#GameBarracks .BarracksBuilding img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
 
+div#GameBarracks  .BarracksBuilding img:hover{
+    opacity: 0.8;
 
- 
+}
+
+div#GameBarracks  .BarracksBuilding img:active{
+    opacity: 0.5;
+}
+
+div#GameBarracks  .BarrackB{
+    left:50%;
+ }
+div#GameBarracks  .BarracksInfo{
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 30%;
+ border: 1px solid blue;
+ overflow: visible;
+ display:none
+}
+div#GameBarracks  .BarracksInfo img{
+    position: absolute;
+    z-index: -1;
+    top: -120%;
+    right: 0;
+    width: 50%;
+    height: auto;
+    pointer-events: none; /* 클릭 불가 처리 */
+}
+div#GameBarracks  .BarracksInfo .BackButton{
+     bottom:4%;
+     height: 17%;
+}
+
 /* 병영관리 화면 위 */
 
 /* 모집화면 아래 */

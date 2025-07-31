@@ -143,12 +143,13 @@ var Game={
         sourceLoader.load("img","img/Charas/BuildingBurst.png","BuildingBurst");
         sourceLoader.load("img","img/Charas/Portrait.png","Portrait");
         sourceLoader.load("img","img/Menu/ControlPanel.png","ControlPanel");
-        sourceLoader.load("img","img/Bg/GameStart.jpg","GameStart");
+        sourceLoader.load("img","img/Bg/중세배경2.png","GameStart");
         sourceLoader.load("img","img/Bg/GameWin.jpg","GameWin");
         sourceLoader.load("img","img/Bg/GameLose.jpg","GameLose");
-        sourceLoader.load("img","img/Bg/스테이지(임시).jpg","GameStage");
-        sourceLoader.load("img","img/Bg/병영관리(임시).jpg","GameBarracks");
-        sourceLoader.load("img","img/Bg/모집화면(임시).jpg","GameRecruitment");
+        sourceLoader.load("img","img/Bg/중세배경4.png","GameStage");
+        sourceLoader.load("img","img/Bg/중배6정.png","GameBarracks");
+        sourceLoader.load("img","img/Bg/중세배경1.png","GameRecruitment");
+         sourceLoader.load("img","img/Bg/중세배경1.png","GameStore");
         // sourceLoader.load("img","img/Charas/Mutalisk.png","테스트");
 
         sourceLoader.allOnLoad(function(){
@@ -159,6 +160,7 @@ var Game={
             $('#GameStage').prepend(sourceLoader.sources['GameStage']);
             $('#GameBarracks').prepend(sourceLoader.sources['GameBarracks']);
             $('#GameRecruitment').prepend(sourceLoader.sources['GameRecruitment']);
+            $('#GameStore').prepend(sourceLoader.sources['GameStore']);
             $('#GamePlay>canvas').attr('width',Game.HBOUND);//Canvas width adjust
             $('#GamePlay>canvas').attr('height',Game.VBOUND-Game.infoBox.height+5);//Canvas height adjust
             for (var N=1;N<=9;N++){
@@ -217,8 +219,14 @@ var Game={
         //Game start
         Game.layerSwitchTo("GameStart");       
            $('.menuSelectionBg').append('<div role="button" class="goStageButton  menuButton" onClick="Game.moveGameStage()">전투</div>');
-           $('.menuSelectionBg').append('<div role="button" class="goBarracksButton  menuButton" onClick="Game.moveGameBarracks()">병영관리</div>');
+           $('.menuSelectionBg').append('<div role="button" class="goStoreButton  menuButton" onClick="Game.moveGameStore()">캐시상점</div>');
            $('.menuSelectionBg').append('<div role="button" class="goRecruitmentButton  menuButton" onClick="Game.moveGameRecruitment()">모집</div>');
+           $('.menuSelectionBg').append('<div role="button" class="goBarracksButton  menuButton" onClick="Game.moveGameBarracks()">병영관리</div>');
+        // 병영관리
+        $('#GameBarracks').append('<div role="button" class="UpgradedB BarracksBuilding" onClick="Game.clickUpgradedB()"><img src="../img/Charas/중건1.png"></div>');
+        $('#GameBarracks').append('<div role="button" class="BarrackB BarracksBuilding" onClick="Game.clickBarrackB()"><img src="../img/Charas/훈련소.png"></div>');
+        $('.BarracksInfo').append('<h1>업그레이드<h1>');
+        $('.BarracksInfo').append('<img class="BarracksInfoImg" src="">');
         //Wait for user select level and play game
         //  $('.menuItem[name="menuSelect"]').click(function(){
         //      //버튼 여러개 한번에 실행 방지
@@ -1234,16 +1242,47 @@ var Game={
         Game.layerSwitchTo("GameStart");
 
     },
-    moveGameStage:function(){
-        Game.layerSwitchTo("GameStage");
+    moveGameStage: function () {
+    Game.layerSwitchTo("GameStage");
 
-    },
+      // 슬라이더 완전 초기화 후 다시 세팅
+    const $slider = $('.StageButtonSlider');
+    if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('unslick');
+    }
+
+    // 다시 초기화
+    $slider.slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        infinite: false
+    });
+},
+
     moveGameBarracks:function(){
         Game.layerSwitchTo("GameBarracks");
 
     },
     moveGameRecruitment:function(){
         Game.layerSwitchTo("GameRecruitment");
+    },
+    moveGameStore:function(){
+        Game.layerSwitchTo("GameStore");
+
+    },
+    closeBInfo:function(){
+        $('div.BarracksInfo').hide();      
+    },
+    clickUpgradedB:function(){      
+        $('.BarracksInfoImg').attr('src', '../img/Charas/임시대장장이.png');
+        $('div.BarracksInfo').show();
+
+    },
+    clickBarrackB:function(){      
+        $('.BarracksInfoImg').attr('src', '../img/Charas/임시전투교관.png');
+        $('div.BarracksInfo').show();
+
     }
 
     

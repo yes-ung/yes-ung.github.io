@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>게임 제작중</title>
     <link rel="stylesheet" href="Utils/slick.css" />
+    <!-- <link rel="stylesheet" href="Utils/prism.css" />
+    <link rel="stylesheet" href="Utils/tiny-slider.css" /> -->
     <link rel="stylesheet" href="css/style.css" /> 
     <link rel="stylesheet" href="css/mapStyle.css" />
     <link rel="stylesheet" href="css/buttonStyle.css" />
@@ -23,7 +25,7 @@
     </div>
     <!-- 로비화면 -->
     <div id="GameStart" class="GameLayer">
-      <div class="menuSelectionBg"></div>
+      <div class="menuSelectionBg UiBack1"></div>
     </div>
     <!-- 스테이지 선택화면 -->
     <div id="GameStage" class="GameLayer">
@@ -40,8 +42,8 @@
      </div>
     <!-- 병영관리 선택화면 -->
      <div id="GameBarracks" class="GameLayer">
-      <div class="BarrackImg"></div>
       <div role="button" class="BackButton" onClick="Game.moveGameLobby()">뒤로가기</div>
+      <div class="BarracksInfo  UiBack1"><div role="button" class="BackButton" onClick="Game.closeBInfo()">닫기</div></div>
      </div>
      <!-- 모집화면,카드뽑기화면 -->
       <div id="GameRecruitment" class="GameLayer">
@@ -180,7 +182,7 @@
     <script src="js/GameRule/Multiplayer.js"></script>
     <!-- <script src="js/GameRule/SC_server.js"></script> -->
 
-    
+    <!-- <script src="Utils/prism.js"></script> -->
     
 
     <script src="js/Controller/mouseController.js"></script>
